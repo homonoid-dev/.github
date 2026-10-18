@@ -1,0 +1,64 @@
+name: Feature Proposal
+description: Propose a new component, token definition, or architectural capability for Homonoid
+title: "[Feature]: "
+labels: ["enhancement", "discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing a feature for the Homonoid Design System. Please describe your idea and explain how it upholds our core architectural principles.
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Proposal Domain
+      description: Select the primary domain for this proposal
+      options:
+        - "Tokens and Theming"
+        - "React Components"
+        - "Showcase and Documentation"
+        - "Developer Experience"
+        - "Other"
+    validations:
+      required: true
+  - type: textarea
+    id: problem_statement
+    attributes:
+      label: Problem Statement
+      description: Explain the problem, use case, or limitation this proposal seeks to resolve
+      placeholder: Describe the context and motivation for this feature
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution
+      description: Detail the proposed solution, expected behavior, and potential application programming interface design
+      placeholder: Describe the solution, component specifications, or token schemas
+    validations:
+      required: true
+  - type: textarea
+    id: architectural_alignment
+    attributes:
+      label: Homonoid Architectural Alignment
+      description: Explain how this proposal respects spatial continuity, dimensional stability, token first precision, and sensory accessibility
+      placeholder: Describe how the proposal adheres to the core pillars of the Homonoid Design System
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives_considered
+    attributes:
+      label: Alternatives Considered
+      description: Describe any alternative solutions, designs, or workarounds you considered
+      placeholder: Mention other approaches and why they were not chosen
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Validation Checklist
+      description: Please confirm the following checks before submitting
+      options:
+        - label: I have searched existing discussions and issues to verify this proposal is novel
+          required: true
+        - label: I understand this proposal must align with the core architectural pillars of Homonoid
+          required: true

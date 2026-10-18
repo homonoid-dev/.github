@@ -1,0 +1,79 @@
+name: Bug Report
+description: Report a defect or dimensional instability in the Homonoid Design System
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue in Homonoid. Please fill out the fields below so maintainers can reproduce and resolve the problem effectively.
+  - type: dropdown
+    id: package
+    attributes:
+      label: Affected Package
+      description: Select the Homonoid package where the defect occurs
+      options:
+        - "@homonoid/tokens"
+        - "@homonoid/react"
+        - "showcase"
+        - "documentation"
+        - "other"
+    validations:
+      required: true
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: Current Behavior
+      description: Describe what is currently happening including any visual shifts or unexpected states
+      placeholder: Describe the current behavior in detail
+    validations:
+      required: true
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: Describe what should happen in accordance with Homonoid dimensional stability or token rules
+      placeholder: Describe the expected behavior and architectural expectation
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: Reproduction Steps
+      description: Provide sequential steps to reproduce the issue
+      placeholder: |
+        1. Open component in showcase or consumer application
+        2. Trigger state change or dynamic update
+        3. Observe layout shift or visual defect
+    validations:
+      required: true
+  - type: input
+    id: reproduction_url
+    attributes:
+      label: Reproduction Repository or Sandbox URL
+      description: Provide a link to a minimal reproduction repository or online sandbox
+      placeholder: https://github.com/...
+    validations:
+      required: false
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Details
+      description: Specify versions for React, Node, browser, operating system, and Homonoid packages
+      placeholder: |
+        Homonoid Package Version:
+        React Version:
+        Browser and Version:
+        Operating System:
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Validation Checklist
+      description: Please confirm the following checks before submitting
+      options:
+        - label: I have searched existing issues to ensure this bug has not already been reported
+          required: true
+        - label: I have verified that this issue is reproducible on the latest release
+          required: true
